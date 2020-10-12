@@ -28,9 +28,10 @@ if __name__ == '__main__':
     output3 = args.output3
 
 
+    # path = "/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_nfl/nextstrain/batch01_20201011/pre-analyses/"
     # genomes = path + 'temp_sequences.fasta'
     # metadata1 = path + 'metadata_nextstrain.tsv'
-    # metadata2 = path + 'Sequencing-SC2.xlsx'
+    # metadata2 = path + 'SC2_Project2.xlsx'
     # output1 = path + 'metadata_filtered.tsv'
     # output2 = path + 'rename.tsv'
     # output3 = path + 'sequences.fasta'
@@ -87,7 +88,7 @@ if __name__ == '__main__':
     for id in sequences.keys():
         # check nextstrain metadata first
         dRow = {}
-        if id in dfN['strain'].to_list() and not id.startswith('Y-'):
+        if id in dfN['strain'].to_list() and len(id) > 4:
             fields = {column: '' for column in lColumns}
             row = dfN.loc[lambda dfN: dfN['strain'] == id]
 
@@ -132,7 +133,7 @@ if __name__ == '__main__':
         # check lab's metadata otherwise
         if id not in dRow.keys():
             # check lab metadata
-            if id.startswith('Y-'):
+            if len(id) < 5:
                 id = str(id)
                 lab_label[id] = ''
 
@@ -163,18 +164,16 @@ if __name__ == '__main__':
                         region_exposure = 'North America'
                         country_exposure = 'USA'
                         iso = get_iso(country_exposure)
-#                         iso = 'USA'  # change this line to match the country of origin (alpha-3 ISO code)
                         division_exposure = ''
                         originating_lab = row['lab']
                         submitting_lab = 'Grubaugh Lab - Yale School of Public Health'  # change this line to match you lab's name
                         category = row['category']
                         batch = 'Batch' + str('0' * (3 - len(row['batch']))) + row['batch']
-                        sequencing_collection_date = row['sequencing-collection-date']
-
+                        sequencing_date = row['sequencing-collection-date'].strftime('%Y-%m-%d')
 
                         lValues = [strain, gisaid_epi_isl, genbank_accession, date, iso, country, division, location,
                                    region_exposure, country_exposure, division_exposure, originating_lab, submitting_lab,
-                                   category, batch, sequencing_collection_date]
+                                   category, batch, sequencing_date]
 
                         header = '|'.join([strain, country, division.replace(' ', '-'), date])
                         dHeaders[strain] = header
@@ -218,7 +217,7 @@ if __name__ == '__main__':
     with open(output3, 'w') as outfile3:
         # export new fasta entries
         for id, sequence in sequences.items():
-            if id.startswith('Y-'):
+            if len(id) < 5:
                 if lab_label[id] not in exported:
                     entry = '>' + lab_label[id] + '\n' + sequence + '\n'
                     outfile3.write(entry)

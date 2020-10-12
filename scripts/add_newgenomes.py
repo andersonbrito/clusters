@@ -74,7 +74,7 @@ if __name__ == '__main__':
                 entry = ">" + id + "\n" + sequences[id].upper() + "\n"
                 exported.append(id)
                 output.write(entry)
-                if id.startswith('Y-'): # search for newly sequenced genomes, named "Y-9999"
+                if len(id) < 5: # search for newly sequenced genomes, named "F999"
                     print('* ' + str(c) + '. ' + id)
                 else:
                     print(str(c) + '. ' + id)

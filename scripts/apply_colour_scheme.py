@@ -417,7 +417,6 @@ if __name__ == '__main__':
     start, end = hue_to_hex[custom_hue]
     gradient = linear_gradient(start, end, len(facilities))
     for facility, colour in zip(facilities, gradient):
-        print('category', facility, colour)
         categories[facility] = colour
 
     for cat, hex in categories.items():
