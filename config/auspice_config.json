@@ -1,0 +1,63 @@
+{
+  "title": "Genome sequencing and evolutionary analysis",
+  "build_url": "https://github.com/grubaughlab/CT-SARS-CoV-2",
+  "maintainers": [
+    {"name": "Chaney Kalinich, Joseph Fauver and Anderson Brito (Grubaugh Lab)",
+     "url": "https://grubaughlab.com/"}
+  ],
+  "colorings": [
+    {
+      "key": "category",
+      "title": "Category",
+      "type": "categorical"
+    },
+    {
+      "key": "batch",
+      "title": "Batch",
+      "type": "categorical"
+    },
+    {
+      "key": "region_exposure",
+      "title": "Region",
+      "type": "categorical"
+    },
+    {
+      "key": "country_exposure",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "division_exposure",
+      "title": "Division",
+      "type": "categorical"
+    },
+    {"key":"sequencing_collection_date",
+    "title":"Collected for sequencing",
+    "type":"categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "division_exposure",
+    "country_exposure"
+  ],
+  "display_defaults": {
+    "color_by": "category",
+    "distance_measure": "div",
+    "geo_resolution": "division_exposure",
+    "map_triplicate": true,
+    "branch_label": "clade"
+  },
+  "filters": [
+    "category",
+    "batch",
+    "originating_lab",
+    "sequencing_collection_date",
+    "division_exposure",
+    "country_exposure"
+  ],
+  "panels": [
+    "tree",
+    "map",
+    "entropy"
+  ]
+}
