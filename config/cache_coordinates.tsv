@@ -17,6 +17,82 @@ region_exposure	South America	-20.172215	-58.168541
 region_exposure	Central America	17.136938	-93.867420
 region_exposure	Caribbean	18.087038	-67.891559
 region_exposure	North America	49.384464	-95.153337
+region_exposure	Andorra	42.5407167	1.5732033
+region_exposure	Iran	32.6475314	54.5643516
+region_exposure	Australia	-24.7761086	134.755
+region_exposure	Austria	47.2000338	13.199959
+region_exposure	Bahrain	26.1551249	50.5344606
+region_exposure	China	35.000074	104.999927
+region_exposure	Hungary	47.1817585	19.5060937
+region_exposure	France	46.603354	1.8883335
+region_exposure	Belgium	50.6402809	4.6667145
+region_exposure	Belize	16.8259793	-88.7600927
+region_exposure	Bosnia and Herzegovina	44.3053476	17.5961467
+region_exposure	Brazil	-10.3333333	-53.2
+region_exposure	Brunei	4.4137155	114.5653908
+region_exposure	Bulgaria	42.6073975	25.4856617
+region_exposure	Hong Kong	22.2793278	114.1628131
+region_exposure	Canada	61.0666922	-107.9917071
+region_exposure	Costa Rica	10.2735633	-84.0739102
+region_exposure	Argentina	-34.9964963	-64.9672817
+region_exposure	Croatia	45.5643442	17.0118954
+region_exposure	Cuba	23.0131338	-80.8328748
+region_exposure	Cyprus	34.9823018	33.1451285
+region_exposure	Czech Republic	49.8167003	15.4749544
+region_exposure	Denmark	55.670249	10.3333283
+region_exposure	Dominican Republic	19.0974031	-70.3028026
+region_exposure	United Kingdom	54.7023545	-3.2765753
+region_exposure	Finland	63.2467777	25.9209164
+region_exposure	Georgia	41.6809707	44.0287382
+region_exposure	Germany	51.0834196	10.4234469
+region_exposure	Greece	38.9953683	21.9877132
+region_exposure	Guam	13.450125700000001	144.75755102972062
+region_exposure	Guatemala	15.6356088	-89.8988087
+region_exposure	Iceland	64.9841821	-18.1059013
+region_exposure	Indonesia	-2.4833826	117.8902853
+region_exposure	Ireland	52.865196	-7.9794599
+region_exposure	Israel	31.5313113	34.8667654
+region_exposure	Italy	42.6384261	12.674297
+region_exposure	Jamaica	18.1152958	-77.1598454610168
+region_exposure	Japan	36.5748441	139.2394179
+region_exposure	Egypt	26.2540493	29.2675469
+region_exposure	Jordan	31.1667049	36.941628
+region_exposure	Kazakhstan	47.2286086	65.2093197
+region_exposure	Kuwait	29.2733964	47.4979476
+region_exposure	Latvia	56.8406494	24.7537645
+region_exposure	Lebanon	33.8750629	35.843409
+region_exposure	Luxembourg	49.8158683	6.1296751
+region_exposure	Malaysia	4.5693754	102.2656823
+region_exposure	Mexico	19.4326296	-99.1331785
+region_exposure	Mongolia	46.8250388	103.8499736
+region_exposure	Montenegro	42.9868853	19.5180992
+region_exposure	Netherlands	52.5001698	5.7480821
+region_exposure	New Zealand	-41.5000831	172.8344077
+region_exposure	Norway	64.5731537	11.52803643954819
+region_exposure	Oman	21.0000287	57.0036901
+region_exposure	Pakistan	30.3308401	71.247499
+region_exposure	Panama	8.559559	-81.1308434
+region_exposure	Spain	39.3262345	-4.8380649
+region_exposure	USA	39.7837304	-100.4458825
+region_exposure	Philippines	12.7503486	122.7312101
+region_exposure	Poland	52.215933	19.134422
+region_exposure	Portugal	40.0332629	-7.8896263
+region_exposure	Qatar	25.3336984	51.2295295
+region_exposure	Romania	45.9852129	24.6859225
+region_exposure	Russia	64.6863136	97.7453061
+region_exposure	Saudi Arabia	25.6242618	42.3528328
+region_exposure	Singapore	1.3408630000000001	103.83039182212079
+region_exposure	Slovakia	48.7411522	19.4528646
+region_exposure	Slovenia	45.8133113	14.4808369
+region_exposure	South Korea	36.638392	127.6961188
+region_exposure	Sri Lanka	7.5554942	80.7137847
+region_exposure	Sweden	59.6749712	14.5208584
+region_exposure	Switzerland	46.7985624	8.2319736
+region_exposure	Taiwan	23.9739374	120.9820179
+region_exposure	Thailand	14.8971921	100.83273
+region_exposure	Turkey	38.9597594	34.9249653
+region_exposure	United Arab Emirates	24.0002488	53.9994829
+region_exposure	Vietnam	13.2904027	108.4265113
 
 country_exposure	Austria	46.6170546	13.865275628046504
 country_exposure	Bangladesh	24.4768783	90.2932426
@@ -57,6 +133,99 @@ country_exposure	Thailand	13.61349745	101.34100986705569
 country_exposure	Turkey	41.06606835	28.777094917666467
 country_exposure	Ukraine	48.0050835	37.76691462493043
 country_exposure	United Arab Emirates	25.3936392	55.4625468
+country_exposure	Australia	-34.06232345	151.15521395000002
+country_exposure	Hungary	47.46032625	18.98112205654111
+country_exposure	Belize	-0.21988865	-78.50697011945093
+country_exposure	Bulgaria	43.2071763	27.9180483
+country_exposure	Hong Kong	22.4208669	114.2086577
+country_exposure	Costa Rica	11.0040492	-85.3155971
+country_exposure	Argentina	-30.4231845	-56.4637806
+country_exposure	Cuba	23.1417159	-82.3590233
+country_exposure	Czech Republic	50.05118155	14.440578669395586
+country_exposure	Dominican Republic	18.459371	-70.8308475
+country_exposure	Greece	34.8010717	24.1221064
+country_exposure	Guatemala	-0.21988865	-78.50697011945093
+country_exposure	Jamaica	18.01573665	-77.49914332051299
+country_exposure	Kazakhstan	50.74769565	56.47253340121922
+country_exposure	Lebanon	33.8946793	35.5020778
+country_exposure	Luxembourg	47.42448	0.697443
+country_exposure	Mongolia	8.2840168	-62.7285083
+country_exposure	New Zealand	-44.8810548	171.09533834261626
+country_exposure	Poland	50.26595295	18.697591604165567
+country_exposure	Qatar	25.3139467	51.520158
+country_exposure	Romania	44.4165631	26.1149836
+country_exposure	Slovakia	48.1913061	18.608241839671244
+country_exposure	Puerto Rico	18.235853	-66.522056
+country_exposure	Alaska	64.4459613	-149.680909
+country_exposure	Alabama	34.785415	-87.619021
+country_exposure	Arkansas	33.9582866	-91.8401252
+country_exposure	Arizona	34.395342	-111.7632755
+country_exposure	California	34.056324	-117.1817339
+country_exposure	Louisiana	30.8703881	-92.007126
+country_exposure	Colorado	38.7251776	-105.6077167
+country_exposure	Connecticut	41.6500201	-72.7342163
+country_exposure	Washington DC	38.8949924	-77.0365581
+country_exposure	Delaware	38.6920451	-75.4013315
+country_exposure	Florida	27.7567667	-81.4639835
+country_exposure	Georgia	33.7501687	-84.3859549
+country_exposure	Hawaii	21.405690550000003	-157.81444575743768
+country_exposure	Iowa	42.070703	-90.6443905
+country_exposure	Idaho	43.6447642	-114.0154071
+country_exposure	Illinois	41.8908132	-87.6277338
+country_exposure	Indiana	39.768534	-86.158011
+country_exposure	Kansas	37.8222598	-96.8784257
+country_exposure	Kentucky	37.5726028	-85.1551411
+country_exposure	Massachusetts	42.358796	-71.0577937
+country_exposure	Maryland	39.5162234	-76.9382069
+country_exposure	Maine	45.709097	-68.8590201
+country_exposure	Michigan	42.120868	-85.526382
+country_exposure	Minnesota	45.9896587	-94.6113288
+country_exposure	Missouri	38.7604815	-92.5617875
+country_exposure	Mississippi	33.4549304	-88.7859584
+country_exposure	North Carolina	36.066061	-79.3111587
+country_exposure	Nebraska	40.276199	-96.710805
+country_exposure	New Jersey	40.0757384	-74.4041622
+country_exposure	New York	43.1561681	-75.8449946
+country_exposure	New Mexico	32.8684408	-108.5746086
+country_exposure	Texas	29.88836715	-97.94477272012038
+country_exposure	Nevada	39.5158825	-116.8537227
+country_exposure	Ohio	41.8924345	-87.6277656
+country_exposure	Oklahoma	34.9550817	-97.2684063
+country_exposure	Oregon	43.9792797	-120.737257
+country_exposure	Pennsylvania	39.960841	-75.200541
+country_exposure	South Carolina	33.6874388	-80.4363743
+country_exposure	Tennessee	35.1184299	-89.9389828
+country_exposure	Utah	39.4225192	-111.7143584
+country_exposure	Virginia	37.1232245	-78.4927721
+country_exposure	Vermont	44.5990718	-72.5002608
+country_exposure	Washington	47.2868352	-120.2126139
+country_exposure	Wisconsin	44.4308975	-89.6884637
+country_exposure	Wyoming	43.1700264	-107.5685348
+country_exposure	Montana	46.402026649999996	-105.86368251764148
+country_exposure	Tennesee	32.4553681	-106.4894389
+country_exposure	Andorra	42.5407167	1.5732033
+country_exposure	Bahrain	26.1551249	50.5344606
+country_exposure	Bosnia and Herzegovina	44.3053476	17.5961467
+country_exposure	Brunei	4.4137155	114.5653908
+country_exposure	Croatia	45.5643442	17.0118954
+country_exposure	Cyprus	34.9823018	33.1451285
+country_exposure	Denmark	55.670249	10.3333283
+country_exposure	Finland	63.2467777	25.9209164
+country_exposure	Guam	13.450125700000001	144.75755102972062
+country_exposure	Iceland	64.9841821	-18.1059013
+country_exposure	Ireland	52.865196	-7.9794599
+country_exposure	Japan	36.5748441	139.2394179
+country_exposure	Jordan	31.1667049	36.941628
+country_exposure	Kuwait	29.2733964	47.4979476
+country_exposure	Latvia	56.8406494	24.7537645
+country_exposure	Malaysia	4.5693754	102.2656823
+country_exposure	Montenegro	42.9868853	19.5180992
+country_exposure	Norway	64.5731537	11.52803643954819
+country_exposure	Slovenia	45.8133113	14.4808369
+country_exposure	South Korea	36.638392	127.6961188
+country_exposure	Sri Lanka	7.5554942	80.7137847
+country_exposure	Taiwan	23.9739374	120.9820179
+country_exposure	Vietnam	13.2904027	108.4265113
 
 division_exposure	Austria	46.6170546	13.865275628046504
 division_exposure	Chattogram	22.2589146	91.9476698
@@ -218,6 +387,83 @@ division_exposure	Ukraine	48.0050835	37.76691462493043
 division_exposure	United Arab Emirates	25.3936392	55.4625468
 division_exposure	Wales	51.57145585	-2.9461166725225643
 division_exposure	Yunnan	22.5120921	103.956791
+division_exposure	Delaware	40.1581128	-83.1174088
+division_exposure	Maricopa County	33.34883	-112.49123
+division_exposure	Imperial County	33.0305487	-115.3595666
+division_exposure	San Diego	32.7174209	-117.1627714
+division_exposure	New Orleans	29.9499323	-90.0701156
+division_exposure	Solano County	38.2218938	-121.9163555
+division_exposure	Los Angeles County	34.3155072	-118.2096814
+division_exposure	Tuolumne County	38.056944	-119.9919351
+division_exposure	Santa Clara County	37.2333253	-121.6846349
+division_exposure	San Francisco	37.7790262	-122.4199061
+division_exposure	Alameda County	37.6090291	-121.899142
+division_exposure	Humboldt County	40.5997415	-123.8997734
+division_exposure	San Joaquin County	37.9372901	-121.2773719
+division_exposure	San Luis Obispo County	35.3540209	-120.3757163
+division_exposure	Madera County	37.1716264	-119.7737991
+division_exposure	Yolo County	38.7184542	-121.9059001
+division_exposure	Ventura County	34.4458248	-119.0779359
+division_exposure	Contra Costa County	37.9034806	-121.9175345
+division_exposure	Marin County	38.0409144	-122.6199638
+division_exposure	San Diego County	32.9637838	-116.7706277
+division_exposure	Denver County	39.7348381	-104.9653271
+division_exposure	Milford	41.2222218	-73.0570603
+division_exposure	New Castle	39.6620572	-75.5663132
+division_exposure	Miami	25.7742658	-80.1936589
+division_exposure	Walton County	30.6204939	-86.1912678
+division_exposure	Miami-Dade County	25.6364246	-80.4989467
+division_exposure	Chicago	41.8966529	-87.6281533
+division_exposure	Caddo Parish	32.529173	-93.8931785
+division_exposure	East Baton Rouge Parish	30.5254797	-91.0899217
+division_exposure	Winona County	43.9582272	-91.7807784
+division_exposure	Houston County	43.6624222	-91.4685617
+division_exposure	Saint Louis County	38.6398744	-90.51881277501238
+division_exposure	Bergen County	40.9678345	-74.0563254
+division_exposure	Hudson County	40.7381635	-74.0550731
+division_exposure	Essex County	40.7913922	-74.2479444
+division_exposure	Morris County	40.8679538	-74.5601181
+division_exposure	Burlington County	39.9325409	-74.7226665
+division_exposure	Clark County NV	36.05443345	-115.02780998152852
+division_exposure	Brooklyn	40.6501038	-73.9495823
+division_exposure	Manhattan	40.7896239	-73.9598939
+division_exposure	Queens	40.7498243	-73.7976337
+division_exposure	Staten Island	40.5834557	-74.1496048
+division_exposure	Nassau County	40.7430237	-73.56882214900722
+division_exposure	Suffolk County	40.861636	-72.515976
+division_exposure	Bronx	40.8506558	-73.8665241
+division_exposure	Westchester County	41.1763139	-73.7907554
+division_exposure	New York City	40.7127281	-74.0060152
+division_exposure	New York County	40.7810178	-73.95929967500001
+division_exposure	Onondaga County	43.015598	-76.2257127
+division_exposure	Multnomah County	45.5093799	-122.4006413
+division_exposure	Wasco County	45.0430227	-121.2154207
+division_exposure	Pittsburgh	40.4416941	-79.9900861
+division_exposure	Allegheny County	40.4597204	-79.9760405
+division_exposure	Ponce	18.011564	-66.613958
+division_exposure	Georgetown	33.4392245	-79.3343041
+division_exposure	El Paso	29.753294	-94.965044
+division_exposure	King County	47.4873376	-121.8622122
+division_exposure	Yakima County	46.4135961	-120.730253
+division_exposure	Whatcom County	48.8107819	-121.8828175
+division_exposure	Pierce County	47.0022547	-122.2117983
+division_exposure	Vernon County	43.5811229	-90.8231247
+division_exposure	La Crosse County	43.8890516	-91.0902393
+division_exposure	Trempealeau County	44.2782406	-91.3828806
+division_exposure	Juneau County	43.9532381	-90.1218405
+division_exposure	Dane County	43.05982075	-89.41047560447983
+division_exposure	Waukesha County	43.0622536	-88.3123889
+division_exposure	Dodge County	43.413614	-88.7177834
+division_exposure	Milwaukee County	43.018032500000004	-87.58075460628575
+division_exposure	USA	42.358796	-71.0577937
+division_exposure	Hawaii	21.405690550000003	-157.81444575743768
+division_exposure	Kansas	37.8222598	-96.8784257
+division_exposure	Maine	45.709097	-68.8590201
+division_exposure	Vermont	44.5990718	-72.5002608
+division_exposure	Wyoming	43.1700264	-107.5685348
+division_exposure	Montana	46.402026649999996	-105.86368251764148
+division_exposure	Tennesee	32.4553681	-106.4894389
+division_exposure	Virgin Islands	17.727304	-64.748327
 
 location	Alaska	64.4459613	-149.680909
 location	Alabama	33.2588817	-86.8295337
@@ -265,4 +511,101 @@ location	Orlando	28.5421109	-81.3790304
 location	Unknown	6.402589949999999	43.398382018489485
 location	USA	39.7837304	-100.4458825
 location	Naples	40.8359336	14.2487826
+location	Maricopa County	33.34883	-112.49123
+location	Imperial County	33.0305487	-115.3595666
+location	San Diego	32.7174209	-117.1627714
+location	New Orleans	29.9499323	-90.0701156
+location	Solano County	38.2218938	-121.9163555
+location	Los Angeles County	34.3155072	-118.2096814
+location	Tuolumne County	38.056944	-119.9919351
+location	Santa Clara County	37.2333253	-121.6846349
+location	San Francisco	37.7790262	-122.4199061
+location	Alameda County	37.6090291	-121.899142
+location	Humboldt County	40.5997415	-123.8997734
+location	San Joaquin County	37.9372901	-121.2773719
+location	San Luis Obispo County	35.3540209	-120.3757163
+location	Madera County	37.1716264	-119.7737991
+location	Yolo County	38.7184542	-121.9059001
+location	Ventura County	34.4458248	-119.0779359
+location	Contra Costa County	37.9034806	-121.9175345
+location	Marin County	38.0409144	-122.6199638
+location	San Diego County	32.9637838	-116.7706277
+location	Denver County	39.7348381	-104.9653271
+location	Milford	41.2222218	-73.0570603
+location	New Castle	39.6620572	-75.5663132
+location	Walton County	30.6204939	-86.1912678
+location	Chicago	41.8966529	-87.6281533
+location	Caddo Parish	32.529173	-93.8931785
+location	East Baton Rouge Parish	30.5254797	-91.0899217
+location	Winona County	43.9582272	-91.7807784
+location	Houston County	43.6624222	-91.4685617
+location	Saint Louis County	38.6398744	-90.51881277501238
+location	Bergen County	40.9678345	-74.0563254
+location	Hudson County	40.7381635	-74.0550731
+location	Essex County	40.7913922	-74.2479444
+location	Morris County	40.8679538	-74.5601181
+location	Burlington County	39.9325409	-74.7226665
+location	Clark County NV	36.05443345	-115.02780998152852
+location	Brooklyn	40.6501038	-73.9495823
+location	Manhattan	40.7896239	-73.9598939
+location	Queens	40.7498243	-73.7976337
+location	Staten Island	40.5834557	-74.1496048
+location	Nassau County	40.7430237	-73.56882214900722
+location	Suffolk County	40.861636	-72.515976
+location	Bronx	40.8506558	-73.8665241
+location	Westchester County	41.1763139	-73.7907554
+location	New York City	40.7127281	-74.0060152
+location	New York County	40.7810178	-73.95929967500001
+location	Onondaga County	43.015598	-76.2257127
+location	Multnomah County	45.5093799	-122.4006413
+location	Wasco County	45.0430227	-121.2154207
+location	Pittsburgh	40.4416941	-79.9900861
+location	Allegheny County	40.4597204	-79.9760405
+location	Ponce	18.011564	-66.613958
+location	Georgetown	33.4392245	-79.3343041
+location	El Paso	29.753294	-94.965044
+location	King County	47.4873376	-121.8622122
+location	Yakima County	46.4135961	-120.730253
+location	Whatcom County	48.8107819	-121.8828175
+location	Pierce County	47.0022547	-122.2117983
+location	Vernon County	43.5811229	-90.8231247
+location	La Crosse County	43.8890516	-91.0902393
+location	Trempealeau County	44.2782406	-91.3828806
+location	Juneau County	43.9532381	-90.1218405
+location	Dane County	43.05982075	-89.41047560447983
+location	Waukesha County	43.0622536	-88.3123889
+location	Dodge County	43.413614	-88.7177834
+location	Milwaukee County	43.018032500000004	-87.58075460628575
+location	Interior Alaska	61.5840639	-149.429444
+location	Orange County CA	33.6155059	-117.70612944835841
+location	Fairfield County CT	41.2943069	-73.37486
+location	Fayette County	42.8420766	-91.850265
+location	Winneshiek County	43.2677179	-91.8563139
+location	Clayton County	42.8547706	-91.3667151
+location	Allamakee County	43.2961731	-91.3961856
+location	Howard County	43.3353641	-92.3230007
+location	Johnson County	41.6861834	-91.6061124
+location	Buchanan County	42.4634928	-91.8449198
+location	Jackson County IA	42.104101	-90.1670101
+location	Winnebago County IL	42.3255276	-89.1496574
+location	Jo Daviess County	42.3506664	-90.1743742
+location	Stephenson County	42.3503474	-89.6735637
+location	Cook County	41.8197385	-87.756525
+location	Boone County	42.321246	-88.8235511
+location	Indianapolis	39.7683331	-86.1583502
+location	St. Louis MO	38.7918533	-90.2856859
+location	Camden County	39.8014709	-74.968553
+location	Columbus OH	39.3321206	-84.3508736
+location	Cuyahoga County	41.4301347	-81.6905558
+location	Washington County OR	45.4506129	-122.7852763
+location	Greater Houston Area	29.944719	-95.41607390828516
+location	Bexar County	29.4263987	-98.5104781
+location	Clark County WA	45.690319450000004	-122.57120187484755
+location	Adams County WI	43.645525	-89.765234
+location	Jefferson County WI	42.8787058	-88.8827038
+location	San Francisco County	37.7790262	-122.4199061
+location	Columbia County OR	45.9876339	-123.3402171
+location	Montgomery County PA	40.1582327	-75.5112437
+location	Berkeley County	33.1595951	-79.9070461
+location	Richland County SC	33.9529148	-81.6937172
 

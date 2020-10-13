@@ -6,23 +6,23 @@ from uszipcode import SearchEngine
 
 
 if __name__ == '__main__':
-    # parser = argparse.ArgumentParser(
-    #     description="Reformat metadata file by adding column with subcontinental regions based on the UN geo-scheme",
-    #     formatter_class=argparse.ArgumentDefaultsHelpFormatter
-    # )
-    # parser.add_argument("--metadata", required=True, help="Nextstrain metadata file")
-    # parser.add_argument("--geoscheme", required=True, help="XML file with geographic classifications")
-    # parser.add_argument("--output", required=True, help="Updated metadata file")
-    # args = parser.parse_args()
-    #
-    # metadata = args.metadata
-    # geoscheme = args.geoscheme
-    # output = args.output
+    parser = argparse.ArgumentParser(
+        description="Reformat metadata file by adding column with subcontinental regions based on the UN geo-scheme",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+    parser.add_argument("--metadata", required=True, help="Nextstrain metadata file")
+    parser.add_argument("--geoscheme", required=True, help="XML file with geographic classifications")
+    parser.add_argument("--output", required=True, help="Updated metadata file")
+    args = parser.parse_args()
 
-    path = "/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_nfl/nextstrain/batch01_20201012e/pre-analyses/"
-    metadata = path + 'metadata_filtered.tsv'
-    geoscheme = path + "geoscheme.tsv"
-    output = path + 'metadata_geo.tsv'
+    metadata = args.metadata
+    geoscheme = args.geoscheme
+    output = args.output
+
+    # path = "/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_nfl/nextstrain/batch01_20201012e/pre-analyses/"
+    # metadata = path + 'metadata_filtered.tsv'
+    # geoscheme = path + "geoscheme.tsv"
+    # output = path + 'metadata_geo.tsv'
 
 
     focus = ['USA']
@@ -91,7 +91,8 @@ if __name__ == '__main__':
         if country not in focus:
             dfN.loc[idx, 'category'] = 'International'
             dfN.loc[idx, 'division_exposure'] = ''
-            print(dfN.loc[idx, 'strain'])
+            dfN.loc[idx, 'location'] = ''
+
 
         if country == 'USA':
             dfN.loc[idx, 'category'] = 'USA'

@@ -71,7 +71,7 @@ if __name__ == '__main__':
                         results[type].update(coordinates)
                         dont_search.append(subarea)
                     country_name = subarea.split('-')[0]
-                    if type == 'country' and country_name not in set_countries:
+                    if type == 'country_exposure' and country_name not in set_countries:
                         set_countries.append(country_name)
                 except:
                     pass
@@ -94,9 +94,9 @@ if __name__ == '__main__':
     dfN.fillna('', inplace=True)
 
     queries = []
-    pinpoints = [dfN[trait].values.tolist() for trait in columns if trait != 'region']
+    pinpoints = [dfN[trait].values.tolist() for trait in columns if trait != 'region_exposure']
     for address in zip(*pinpoints):
-        traits = [trait for trait in columns if trait != 'region']
+        traits = [trait for trait in columns if trait != 'region_exposure']
         for position, place in enumerate(address):
             level = traits[position]
             query = list(address[0:position + 1])
@@ -119,10 +119,9 @@ if __name__ == '__main__':
                 for name in place:
                     if name not in dont_search:
                         if place[0] == 'USA':
-                            if name != 'USA':
-                                name = name + ' state'
-                        if name not in new_query:
-                            new_query.append(name)
+                            if 'county' in name.lower():
+                                name = name.replace('county', '').replace('County', '')
+                        new_query.append(name)
 
                 item = (trait, ', '.join(new_query))
                 coord = ('NA', 'NA')
