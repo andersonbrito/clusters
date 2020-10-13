@@ -27,18 +27,17 @@ if __name__ == '__main__':
     output2 = args.output2
     output3 = args.output3
 
-
     # path = "/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_nfl/nextstrain/batch01_20201012e/pre-analyses/"
     # genomes = path + 'temp_sequences.fasta'
     # metadata1 = path + 'metadata_nextstrain.tsv'
     # metadata2 = path + 'SC2_Project2.xlsx'
     # output1 = path + 'metadata_filtered.tsv'
-    # output2 = path + 'rename.tsv'
-    # output3 = path + 'sequences.fasta'
+    # output2 = path + 'sequences.fasta'
 
     pd.set_option('max_columns', 100)
 
     # create a dict of existing sequences
+    print('\nProcessing sequence file...\n')
     sequences = {}
     for fasta in SeqIO.parse(open(genomes), 'fasta'):
         id, seq = fasta.description, fasta.seq
@@ -72,6 +71,8 @@ if __name__ == '__main__':
         pass
     dfN['category'] = ''
     dfN['batch'] = ''
+    dfN['sequencing_date'] = ''
+
     dfN.fillna('', inplace=True)
     lColumns = dfN.columns.values  # list of column in the original metadata file
 
@@ -202,6 +203,8 @@ if __name__ == '__main__':
                 notFound.append(id)
         lstNewMetadata = lstNewMetadata + list(dRow.values())
 
+
+
     # write new metadata files
     outputDF = pd.DataFrame(lstNewMetadata, columns=list(lColumns))
     outputDF.to_csv(output1, sep='\t', index=False)
@@ -209,27 +212,18 @@ if __name__ == '__main__':
     if len(notFound) > 0:
         print('\nPlease check for inconsistencies (see above).')
 
-    # write renaming file
-    with open(output2, 'w') as outfile2:
-        # export new metadata lines
-        for id, header in dHeaders.items():
-            outfile2.write(id + '\t' + header + '\n')
-        for id in notFound:
-            print('\t* Warning! No metadata found for ' + id)
-
-
     # write fasta file
     exported = []
     print('\n### Exporting genomes and metadata')
-    print('\t Exporting all selected, publicly available genomes and metadata')
-    with open(output3, 'w') as outfile3:
+    print('\t Exporting all selected lab sequences, publicly available genomes and metadata')
+    with open(output2, 'w') as outfile3:
         # export new fasta entries
         for id, sequence in sequences.items():
             if len(id) < 5:
                 if lab_label[id] not in exported:
                     entry = '>' + lab_label[id] + '\n' + sequence + '\n'
                     outfile3.write(entry)
-                    print('\t* Newly sequenced genome and metadata: ' + id)
+                    print('\t\t* Newly sequenced genome and metadata: ' + id)
                     exported.append(lab_label[id])
             elif len(id) > 4:
                 if id not in exported:

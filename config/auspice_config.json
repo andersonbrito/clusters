@@ -50,8 +50,7 @@
   "filters": [
     "category",
     "batch",
-    "originating_lab",
-    "sequencing_collection_date",
+    "sequencing_date",
     "division_exposure",
     "country_exposure"
   ],
