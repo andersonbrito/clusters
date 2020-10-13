@@ -28,13 +28,15 @@ if __name__ == '__main__':
     output3 = args.output3
 
 
-    # path = "/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_nfl/nextstrain/batch01_20201011/pre-analyses/"
+    # path = "/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_nfl/nextstrain/batch01_20201012e/pre-analyses/"
     # genomes = path + 'temp_sequences.fasta'
     # metadata1 = path + 'metadata_nextstrain.tsv'
     # metadata2 = path + 'SC2_Project2.xlsx'
     # output1 = path + 'metadata_filtered.tsv'
     # output2 = path + 'rename.tsv'
     # output3 = path + 'sequences.fasta'
+
+    pd.set_option('max_columns', 100)
 
     # create a dict of existing sequences
     sequences = {}
@@ -98,11 +100,17 @@ if __name__ == '__main__':
             location = row.location.values[0]
 
             country_exposure = row.country_exposure.values[0].strip()
+            # print('\t > ', country_exposure, country)
+
             if country_exposure in ['', None]:  # ignore travel cases
+                # print('\t - ', country_exposure, country)
                 country_exposure = country
 
             division_exposure = row.division_exposure.values[0].strip()
+            # print('\t - ', division, division_exposure)
+
             if division_exposure in ['', None]:  # ignore travel cases
+                # print('\t - ', division, division_exposure)
                 division_exposure = division
 
             if len(country) < 2:
@@ -164,7 +172,7 @@ if __name__ == '__main__':
                         region_exposure = 'North America'
                         country_exposure = 'USA'
                         iso = get_iso(country_exposure)
-                        division_exposure = ''
+                        division_exposure = division
                         originating_lab = row['lab']
                         submitting_lab = 'Grubaugh Lab - Yale School of Public Health'  # change this line to match you lab's name
                         category = row['category']
@@ -223,7 +231,7 @@ if __name__ == '__main__':
                     outfile3.write(entry)
                     print('\t* Newly sequenced genome and metadata: ' + id)
                     exported.append(lab_label[id])
-            else:
+            elif len(id) > 4:
                 if id not in exported:
                     entry = '>' + id + '\n' + sequence + '\n'
                     outfile3.write(entry)

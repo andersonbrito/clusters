@@ -76,7 +76,7 @@ if __name__ == '__main__':
                 output.write(entry)
                 if len(id) < 5: # search for newly sequenced genomes, named "F999"
                     print('* ' + str(c) + '. ' + id)
-                else:
+                elif len(id) > 4:
                     print(str(c) + '. ' + id)
             else:
                 c -= 1

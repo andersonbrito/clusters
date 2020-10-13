@@ -6,30 +6,27 @@ from uszipcode import SearchEngine
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(
-        description="Reformat metadata file by adding column with subcontinental regions based on the UN geo-scheme",
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter
-    )
-    parser.add_argument("--metadata", required=True, help="Nextstrain metadata file")
-    parser.add_argument("--geoscheme", required=True, help="XML file with geographic classifications")
-    parser.add_argument("--output", required=True, help="Updated metadata file")
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser(
+    #     description="Reformat metadata file by adding column with subcontinental regions based on the UN geo-scheme",
+    #     formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    # )
+    # parser.add_argument("--metadata", required=True, help="Nextstrain metadata file")
+    # parser.add_argument("--geoscheme", required=True, help="XML file with geographic classifications")
+    # parser.add_argument("--output", required=True, help="Updated metadata file")
+    # args = parser.parse_args()
+    #
+    # metadata = args.metadata
+    # geoscheme = args.geoscheme
+    # output = args.output
 
-    metadata = args.metadata
-    geoscheme = args.geoscheme
-    output = args.output
+    path = "/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_nfl/nextstrain/batch01_20201012e/pre-analyses/"
+    metadata = path + 'metadata_filtered.tsv'
+    geoscheme = path + "geoscheme.tsv"
+    output = path + 'metadata_geo.tsv'
 
 
-    # metadata = path + 'metadata_filtered.tsv'
-    # geoscheme = path + "geoscheme.tsv"
-    # output = path + 'metadata_geo.tsv'
-
-
-    focus = ['USA', 'Florida']
-    # not_focus = ['Oceania', 'Southern Asia', 'Central Asia', 'Western Asia',
-    #              'Eastern Europe', 'Northern Africa', 'Western Africa', 'Middle Africa', 'Eastern Africa',
-    #              'Southern Africa', 'South America', 'Central America', 'Caribbean']
-    not_focus = []
+    focus = ['USA']
+    not_focus = ['India', 'South Africa']
 
 
     # get ISO alpha3 country codes
@@ -94,22 +91,18 @@ if __name__ == '__main__':
         if country not in focus:
             dfN.loc[idx, 'category'] = 'International'
             dfN.loc[idx, 'division_exposure'] = ''
+            print(dfN.loc[idx, 'strain'])
+
+        if country == 'USA':
+            dfN.loc[idx, 'category'] = 'USA'
 
         # convert sets of states into subnational regions
         division = dfN.loc[idx, 'division_exposure']
         category = dfN.loc[idx, 'category']
-        if division not in ['', 'unknown']:
-            if division in geoLevels.keys():
-                dfN.loc[idx, 'country_exposure'] = geoLevels[dfN.loc[idx, 'division_exposure']] # convert USA into regions
-            if division == 'Florida' and category == '':
-                dfN.loc[idx, 'category'] = 'Florida'
-            if 'USA' in country and division != 'Florida':
-                if category == '':
-                    dfN.loc[idx, 'category'] = 'USA'
 
-        # flatten location names as division names for divisions that are not a focus of study
-        if division not in focus:
-            dfN.loc[idx, 'location'] = division
+        # # flatten location names as division names for divisions that are not a focus of study
+        # if division not in focus:
+        #     dfN.loc[idx, 'location'] = division
 
         print('Processing metadata for... ' + row['strain'])
 
@@ -119,10 +112,10 @@ if __name__ == '__main__':
         for entry in notfound:
             print('- ' + entry)
 
-    # # drop lines if samples not in focal group
-    # dfN = dfN[~dfN.region.isin(not_focus)]
-    # # drop lines if samples not in focal group
-    # dfN = dfN[~dfN.country.isin(not_focus)]
+    # drop lines if samples not in focal group
+    dfN = dfN[~dfN['region_exposure'].isin(not_focus)]
+    dfN = dfN[~dfN['country_exposure'].isin(not_focus)]
+
 
     # export converted metadata
     dfN.to_csv(output, sep='\t', index=False)
