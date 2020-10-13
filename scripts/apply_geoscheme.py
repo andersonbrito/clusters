@@ -94,7 +94,7 @@ if __name__ == '__main__':
             dfN.loc[idx, 'location'] = ''
 
 
-        if country == 'USA':
+        if country == 'USA' and dfN.loc[idx, 'category'] == '':
             dfN.loc[idx, 'category'] = 'USA'
 
         # convert sets of states into subnational regions
