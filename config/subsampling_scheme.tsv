@@ -1,0 +1,10 @@
+purpose	level	name	size	start	end
+focus	division_exposure	Tennessee	150		
+focus	division_exposure	Massachusetts	150		
+focus	division_exposure	New York	50		
+context	region_exposure	Europe	50		2020-03-15
+context	region_exposure	Asia	50		2020-03-15
+context	region_exposure	North America	150		
+ignore	region_exposure	South America			
+ignore	region_exposure	Oceania			
+ignore	country_exposure	Canada			

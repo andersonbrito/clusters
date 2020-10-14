@@ -6,14 +6,14 @@ import argparse
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        description="Append newly sequenced genomes to current genome dataset, and export metadata",
+        description="Filter genomes not yet added in an existing FASTA dataset",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument("--dataset", required=True, help="FASTA file with pre-existing sequences")
     parser.add_argument("--new-genomes", required=True, help="FASTA file with new sequences")
     parser.add_argument("--max-missing", required=False, type=int,  default='30', help="Maximum percentage of Ns or gaps (int: 1-100)")
     parser.add_argument("--how", required=False, nargs=1, type=str,  default='separate', choices=['separate', 'append', 'mock'],
-                        help="How the new sequences will be exported? In a 'separate' file; appended to the 'input' file, or not exported at all ('mock')?")
+                        help="How new sequences will be exported? In a 'separate' file; appended to the 'input' file, or not exported at all ('mock')?")
     args = parser.parse_args()
 
     dataset = args.dataset
@@ -69,7 +69,6 @@ if __name__ == '__main__':
     # scan newly released genomes
     already_found = []
     new_entries = []
-    outfile.write('')
     for entry in SeqIO.parse(open(new_genomes),'fasta'):
         id, seq = entry.description, str(entry.seq)
         strain = id.replace('hCoV-19/', '').split('|')[0].replace(' ', '')
