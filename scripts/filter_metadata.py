@@ -16,8 +16,7 @@ if __name__ == '__main__':
     parser.add_argument("--metadata1", required=True, help="Metadata file from NextStrain")
     parser.add_argument("--metadata2", required=False, help="Custom lab metadata file")
     parser.add_argument("--output1", required=True, help="Filtered metadata file")
-    parser.add_argument("--output2", required=True, help="TSV file for renaming virus IDs")
-    parser.add_argument("--output3", required=True, help="Reformatted, final FASTA file")
+    parser.add_argument("--output2", required=True, help="Reformatted, final FASTA file")
     args = parser.parse_args()
 
     genomes = args.genomes
@@ -25,7 +24,6 @@ if __name__ == '__main__':
     metadata2 = args.metadata2
     output1 = args.output1
     output2 = args.output2
-    output3 = args.output3
 
     # path = "/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_nfl/nextstrain/batch01_20201012e/pre-analyses/"
     # genomes = path + 'temp_sequences.fasta'
@@ -103,6 +101,7 @@ if __name__ == '__main__':
             country_exposure = row.country_exposure.values[0].strip()
             # print('\t > ', country_exposure, country)
 
+            # fix exposure
             if country_exposure in ['', None]:  # ignore travel cases
                 # print('\t - ', country_exposure, country)
                 country_exposure = country
@@ -216,19 +215,19 @@ if __name__ == '__main__':
     exported = []
     print('\n### Exporting genomes and metadata')
     print('\t Exporting all selected lab sequences, publicly available genomes and metadata')
-    with open(output2, 'w') as outfile3:
+    with open(output2, 'w') as outfile2:
         # export new fasta entries
         for id, sequence in sequences.items():
             if len(id) < 5:
                 if lab_label[id] not in exported:
                     entry = '>' + lab_label[id] + '\n' + sequence + '\n'
-                    outfile3.write(entry)
+                    outfile2.write(entry)
                     print('\t\t* Newly sequenced genome and metadata: ' + id)
                     exported.append(lab_label[id])
             elif len(id) > 4:
                 if id not in exported:
                     entry = '>' + id + '\n' + sequence + '\n'
-                    outfile3.write(entry)
+                    outfile2.write(entry)
                     exported.append(id)
 
 print('\nMetadata file successfully reformatted and exported!\n')

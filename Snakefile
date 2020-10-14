@@ -75,7 +75,6 @@ rule filter_metadata:
 		metadata2 = files.metadata_lab
 	output:
 		filtered_metadata = "pre-analyses/metadata_filtered.tsv",
-		renaming = "pre-analyses/rename.tsv",
 		sequences = "data/sequences.fasta"
 	shell:
 		"""
@@ -84,8 +83,7 @@ rule filter_metadata:
 			--metadata1 {input.metadata1} \
 			--metadata2 {input.metadata2} \
 			--output1 {output.filtered_metadata} \
-			--output2 {output.renaming} \
-			--output3 {output.sequences}
+			--output2 {output.sequences}
 		"""
 
 
