@@ -32,7 +32,8 @@ if __name__ == '__main__':
     newly_sequenced = {}
     for fasta in SeqIO.parse(open(new_genomes),'fasta'):
         id, seq = fasta.description, fasta.seq
-        id = id.split('/')[0]
+        if '/' in id:
+        	id = id.split('/')[0]
         if id not in newly_sequenced.keys(): # avoid potential duplicates
             newly_sequenced[id] = str(seq)
 
