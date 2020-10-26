@@ -84,7 +84,7 @@ if __name__ == '__main__':
                 c -= 1
             c += 1
 
-    # mismatched sequence headers
+    # report sequences that were not found
     m = 1
     if len(mismatch) > 0:
         print('\n### List of genomes not found in input sequence file\n')
