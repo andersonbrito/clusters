@@ -85,13 +85,14 @@ if __name__ == '__main__':
             c += 1
 
     # mismatched sequence headers
-    print('\n### Possible sequence header mismatches\n')
     m = 1
-    for id in mismatch:
-        print(str(m) + '. ' + id)
-        m += 1
-    if len(mismatch) < 1:
-        print('\tNo mismatches found...')
+    if len(mismatch) > 0:
+        print('\n### List of genomes not found in input sequence file\n')
+        for id in mismatch:
+            print(str(m) + '. ' + id)
+            m += 1
+    else:
+        print('\tAll requested genomes were successfully incorporated in the analysis...')
 
 
     # excluding sequences
