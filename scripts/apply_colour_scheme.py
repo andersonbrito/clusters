@@ -410,7 +410,7 @@ if __name__ == '__main__':
 
     # special colouring
     categories = {'International': '#BFBFBF', 'USA': '#609f8e', 'Community':'#603a20'}
-    facilities = ['Facility-6', 'Facility-11', 'Facility-12', 'Facility-22', 'Facility-31', 'Facility-33']
+    facilities = ['Facility-2', 'Facility-6', 'Facility-11', 'Facility-12', 'Facility-22', 'Facility-26', 'Facility-31', 'Facility-33']
     results['category'] = {}
 
     custom_hue = colour_scale['purple'][4]
