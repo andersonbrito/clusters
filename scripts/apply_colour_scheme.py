@@ -29,7 +29,7 @@ if __name__ == '__main__':
     output = args.output
 
 
-    # path = '/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov_immune/nextstrain/run1_test/pre-analyses/'
+    # path = '/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov/ncov_nfl/nextstrain/batchXX_newcolours/pre-analyses/'
     # metadata = path + 'metadata_geo.tsv'
     # coordinates = path + 'latlongs.tsv'
     # geoscheme = path + 'geoscheme.tsv'
@@ -81,6 +81,33 @@ if __name__ == '__main__':
     print('\n### Parsing metadata...\n')
     # open metadata file as dataframe
     dfN = pd.read_csv(metadata, encoding='utf-8', sep='\t', dtype=str)
+
+    # set US-based geoscheme
+    scheme_list = open(geoscheme, "r").readlines()[1:]
+    us_geoscheme = {}
+    for line in scheme_list:
+        if not line.startswith('\n'):
+            type = line.split('\t')[0]
+            if type == 'country_exposure':
+                region = line.split('\t')[2]
+                states = [state.strip() for state in line.split('\t')[5].split(',')]
+                for state in states:
+                    if state not in us_geoscheme:
+                        us_geoscheme[state] = region
+
+    # collect facility data
+    list_facilities = set([facility for facility in dfN['category'].values.tolist() if 'Facility' in facility])
+    usregion_facilities = {}
+    for fac in list_facilities:
+        state = dfN.loc[dfN['category'] == fac, 'division_exposure'].to_list()[0]
+        if state in us_geoscheme:
+            region = us_geoscheme[state]
+            if region not in usregion_facilities:
+                usregion_facilities[region] = [fac]
+            else:
+                usregion_facilities[region] += [fac]
+
+    # keep only geographic data columns
     dfN = dfN[['region_exposure', 'country_exposure', 'division_exposure', 'location']]
 
     ordered_regions = {}
@@ -223,7 +250,6 @@ if __name__ == '__main__':
     # xml = BS(open(geoscheme, "r").read(), 'xml')
     # levels = xml.find('levels')
 
-    scheme_list = open(geoscheme, "r").readlines()[1:]
     sampled_region = [key for dict_ in ordered_regions.values() for key in dict_]
     geodata = {}
 
@@ -240,9 +266,8 @@ if __name__ == '__main__':
                         geodata[continent] += [region]
 
 
-
     ''' IMPORT COLOUR SCHEME '''
-
+    print('\tStep 5. Setting special custom colours...')
     print('\n### Generating colour scheme...\n')
     html = BS(open(grid, "r").read(), 'html.parser')
     tables = html.find_all('table')
@@ -347,8 +372,6 @@ if __name__ == '__main__':
                 if location not in location_colours[reference_divisions[division]]:
                     location_colours[reference_divisions[division]].append(location)
 
-
-
     ''' CREATE COLOUR GRADIENT '''
     # define gradients for regions
     for continent, regions in geodata.items():
@@ -409,15 +432,23 @@ if __name__ == '__main__':
 
 
     # special colouring
-    categories = {'International': '#BFBFBF', 'USA': '#609f8e', 'Community':'#603a20'}
-    facilities = ['Facility-2', 'Facility-5', 'Facility-6', 'Facility-11', 'Facility-12', 'Facility-22', 'Facility-26', 'Facility-31', 'Facility-33']
+    categories = {'International': '#BFBFBF', 'USA': '#609f80', 'Community':'#1d3026'}
     results['category'] = {}
+    usregion_hues = {
+        'USA-Northeast': 220, # blues
+        'USA-Midwest': 280, # purples
+        'USA-South': 0, # reds
+        'USA-West': 40 # yellows
+        }
 
-    custom_hue = colour_scale['purple'][4]
-    start, end = hue_to_hex[custom_hue]
-    gradient = linear_gradient(start, end, len(facilities))
-    for facility, colour in zip(facilities, gradient):
-        categories[facility] = colour
+    for us_region, hue in usregion_hues.items():
+        start, end = hue_to_hex[hue]
+        if us_region in usregion_facilities:
+            facilities = sorted(usregion_facilities[us_region])
+            gradient = linear_gradient(start, end, len(facilities))
+            # print(us_region, hue, facilities, gradient)
+            for facility, colour in zip(facilities, gradient):
+                categories[facility] = colour
 
     for cat, hex in categories.items():
         results['category'].update({cat: hex})
