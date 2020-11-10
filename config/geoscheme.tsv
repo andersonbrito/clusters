@@ -18,3 +18,8 @@ region_exposure	America	South America	-20.172215	-58.168541	Argentina, Bolivia, 
 region_exposure	America	Central America	17.136938	-93.867420	Belize, Costa Rica, El Salvador, Guatemala, Honduras, Mexico, Nicaragua, Panama
 region_exposure	America	Caribbean	18.087038	-67.891559	Anguilla, Antigua and Barbuda, Aruba, Bahamas, Barbados, Bonaire, Sint Eustatius and Saba, British Virgin Islands, Cayman Islands, Cuba, Curaçao, Dominica, Dominican Republic, Grenada, Guadeloupe, Haiti, Jamaica, Martinique, Montserrat, Puerto Rico, Saint Barthélemy, Saint Kitts and Nevis, Saint Lucia, Saint Martin (French part), Saint Vincent and the Grenadines, Sint Maarten (Dutch part), Trinidad and Tobago, Turks and Caicos Islands, United States Virgin Islands
 region_exposure	America	North America	49.384464	-95.153337	Bermuda, Canada, Greenland, Saint Pierre and Miquelon, United States of America, USA
+
+country_exposure	USA	USA-West	41.993719	-114.041724	Hawaii, Alaska, Washington, Oregon, California, Idaho, Montana, Wyoming, Nevada, Utah, Colorado, Arizona, New Mexico
+country_exposure	USA	USA-Midwest	42.508301	-90.640926	North Dakota, South Dakota, Minnesota, Nebraska, Iowa, Kansas, Missouri, Wisconsin, Michigan, Illinois, Indiana, Ohio
+country_exposure	USA	USA-South	32.742565	-88.369056	Texas, Oklahoma, Arkansas, Louisiana, Kentucky, Tennessee, Mississippi, Alabama, West Virginia, Maryland, Delaware, Washington DC, District of Columbia, Virginia, North Carolina, South Carolina, Georgia, Florida
+country_exposure	USA	USA-Northeast	42.049638	-73.487314	New York, New Jersey, Pennsylvania, Vermont, New Hampshire, Maine, Massachusetts, Connecticut, Rhode Island
