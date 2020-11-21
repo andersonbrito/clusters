@@ -1,0 +1,218 @@
+region_exposure	Eastern Asia	#A3298F
+region_exposure	Southeastern Asia	#AD45AB
+region_exposure	Southern Asia	#B761C7
+region_exposure	Central Asia	#C17DE3
+region_exposure	Western Asia	#CC99FF
+region_exposure	Northern Europe	#3D29A3
+region_exposure	Western Europe	#5B6AC1
+region_exposure	Eastern Europe	#7AACE0
+region_exposure	Southern Europe	#99EEFF
+region_exposure	North America	#A32929
+
+country_exposure	Hong Kong	#A3298F
+country_exposure	Taiwan	#BA45A6
+country_exposure	Japan	#D161BE
+country_exposure	South Korea	#E87DD6
+country_exposure	China	#FF99EE
+country_exposure	Indonesia	#A329A3
+country_exposure	Singapore	#D161D1
+country_exposure	Thailand	#FF99FF
+country_exposure	Iran	#8F29A3
+country_exposure	Sri Lanka	#EE99FF
+country_exposure	Uzbekistan	#BC73E0
+country_exposure	Oman	#6629A3
+country_exposure	United Arab Emirates	#7F45BA
+country_exposure	Bahrain	#9961D1
+country_exposure	Palestine	#B27DE8
+country_exposure	Israel	#CC99FF
+country_exposure	United Kingdom	#3D29A3
+country_exposure	Ireland	#7361D1
+country_exposure	Denmark	#AA99FF
+country_exposure	France	#293DA3
+country_exposure	Switzerland	#4E61C1
+country_exposure	Netherlands	#7385E0
+country_exposure	Germany	#99AAFF
+country_exposure	Russia	#73AAE0
+country_exposure	Portugal	#298FA3
+country_exposure	Spain	#61BED1
+country_exposure	Italy	#99EEFF
+country_exposure	USA	#E07373
+
+division_exposure	Puerto Rico	#A32929
+division_exposure	Florida	#A52C2C
+division_exposure	Louisiana	#A82F2F
+division_exposure	Texas	#AA3232
+division_exposure	Georgia	#AD3535
+division_exposure	South Carolina	#AF3838
+division_exposure	Arizona	#B23B3B
+division_exposure	New Mexico	#B43E3E
+division_exposure	Arkansas	#B74141
+division_exposure	North Carolina	#BA4545
+division_exposure	Tennessee	#BC4848
+division_exposure	California	#BF4B4B
+division_exposure	Virginia	#C14E4E
+division_exposure	Colorado	#C45151
+division_exposure	Missouri	#C65454
+division_exposure	Washington DC	#C95757
+division_exposure	Washington	#CB5A5A
+division_exposure	Utah	#CE5D5D
+division_exposure	Nevada	#D16161
+division_exposure	Maryland	#D36464
+division_exposure	Indiana	#D66767
+division_exposure	New Jersey	#D86A6A
+division_exposure	Illinois	#DB6D6D
+division_exposure	Ohio	#DD7070
+division_exposure	New York	#E07373
+division_exposure	Pennsylvania	#E27676
+division_exposure	Connecticut	#E57979
+division_exposure	Iowa	#E87D7D
+division_exposure	Massachusetts	#EA8080
+division_exposure	Wyoming	#ED8383
+division_exposure	Michigan	#EF8686
+division_exposure	Oregon	#F28989
+division_exposure	Wisconsin	#F48C8C
+division_exposure	South Dakota	#F78F8F
+division_exposure	Maine	#F99292
+division_exposure	Minnesota	#FC9595
+division_exposure	Alaska	#FF9999
+
+location	Ponce	#A32929
+location	Miami-Dade County	#A32A2A
+location	USA	#A42B2B
+location	New Orleans	#A52C2C
+location	East Baton Rouge Parish	#A62D2D
+location	Rapides Parish	#A72E2E
+location	Sabine Parish	#A82F2F
+location	Red River Parish	#A93030
+location	Madison Parish	#A93131
+location	Ouachita Parish	#AA3232
+location	Caddo Parish	#AB3333
+location	Lincoln Parish	#AC3434
+location	Webster Parish	#AD3535
+location	Bossier Parish	#AE3636
+location	Morehouse Parish	#AF3737
+location	Union Parish	#AF3838
+location	Hidalgo County	#B03939
+location	Harris County	#B13A3A
+location	Greater Houston Area	#B23B3B
+location	Hays County	#B33C3C
+location	Mclennan County	#B43D3D
+location	El Paso County	#B53E3E
+location	Parker County	#B54040
+location	Dallas County	#B64141
+location	Ochiltree County	#B74242
+location	Georgetown County	#B84343
+location	Maricopa County	#B94444
+location	San Diego County	#BA4545
+location	Imperial County	#BB4646
+location	Orange County CA	#BB4747
+location	Los Angeles County	#BC4848
+location	Ventura County	#BD4949
+location	San Luis Obispo County	#BE4A4A
+location	Madera County	#BF4B4B
+location	Santa Clara County	#C04C4C
+location	Alameda County	#C14D4D
+location	San Francisco County	#C14E4E
+location	Contra Costa County	#C24F4F
+location	San Joaquin County	#C35050
+location	Marin County	#C45151
+location	Yolo County	#C55252
+location	Humboldt County	#C65353
+location	Colorado Springs	#C75454
+location	Denver County	#C75656
+location	Saint Louis County	#C85757
+location	St. Louis MO	#C95858
+location	Yakima County	#CA5959
+location	King County	#CB5A5A
+location	Clark County NV	#CC5B5B
+location	Indianapolis	#CD5C5C
+location	Camden County	#CD5D5D
+location	Burlington County	#CE5E5E
+location	Hudson County	#CF5F5F
+location	Essex County	#D06060
+location	Morris County	#D16161
+location	Bergen County	#D26262
+location	Cook County	#D36363
+location	Chicago	#D46464
+location	Boone County	#D46565
+location	Winnebago County IL	#D56666
+location	Stephenson County	#D66767
+location	Jo Daviess County	#D76868
+location	Columbus OH	#D86969
+location	Cuyahoga County	#D96A6A
+location	New York City	#DA6B6B
+location	Manhattan	#DA6D6D
+location	Montgomery County PA	#DB6E6E
+location	Pittsburgh	#DC6F6F
+location	Allegheny County	#DD7070
+location	Johnson County	#DE7171
+location	Jackson County IA	#DF7272
+location	Buchanan County	#E07373
+location	Dubuque County	#E07474
+location	Fayette County	#E17575
+location	Clayton County	#E27676
+location	Winneshiek County	#E37777
+location	Allamakee County	#E47878
+location	Howard County	#E57979
+location	Marion County	#E67A7A
+location	Sherman County	#E67B7B
+location	Clackamas County	#E77C7C
+location	Washington County OR	#E87D7D
+location	Multnomah County	#E97E7E
+location	Monroe County	#EA7F7F
+location	Racine County	#EB8080
+location	Jefferson County WI	#EC8181
+location	Iowa County WI	#EC8383
+location	Milwaukee County	#ED8484
+location	Dane County	#EE8585
+location	Waukesha County	#EF8686
+location	Ozaukee County	#F08787
+location	Dodge County	#F18888
+location	Richland County WI	#F28989
+location	Columbia County WI	#F28A8A
+location	Vernon County	#F38B8B
+location	Sheboygan County	#F48C8C
+location	La Crosse County	#F58D8D
+location	Juneau County	#F68E8E
+location	Trempealeau County	#F78F8F
+location	Buffalo County	#F89090
+location	Rock County	#F89191
+location	Brown County WI	#F99292
+location	Green County	#FA9393
+location	Taylor County WI	#FB9494
+location	Barron County	#FC9595
+location	Houston County	#FD9696
+location	Winona County	#FE9797
+location	Anchorage	#FF9999
+
+category	International	#BFBFBF
+category	USA	#609F80
+category	Community	#1D3026
+category	Facility-22	#2952A3
+category	Facility-24	#456CBA
+category	Facility-26	#6186D1
+category	Facility-27	#7DA0E8
+category	Facility-4	#99BBFF
+category	Facility-11	#7A29A3
+category	Facility-12	#8637AE
+category	Facility-14	#9245BA
+category	Facility-16	#9F53C5
+category	Facility-21	#AB61D1
+category	Facility-33	#B76FDC
+category	Facility-6	#C47DE8
+category	Facility-7	#D08BF3
+category	Facility-8	#DD99FF
+category	Facility-13	#A32929
+category	Facility-15	#AE3737
+category	Facility-2	#BA4545
+category	Facility-20	#C55353
+category	Facility-23	#D16161
+category	Facility-3	#DC6F6F
+category	Facility-31	#E87D7D
+category	Facility-5	#F38B8B
+category	Facility-9	#FF9999
+category	Facility-1	#A37A29
+category	Facility-10	#C19B4E
+category	Facility-17	#E0BC73
+category	Facility-19	#FFDD99
+

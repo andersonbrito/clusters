@@ -1,0 +1,32 @@
+purpose	level	name	size	start	end
+focus	division_exposure	California	80	7/1/20	
+focus	division_exposure	Nevada	80	7/1/20	
+focus	division_exposure	Arizona	80	7/1/20	
+focus	division_exposure	Colorado	80	7/1/20	
+focus	division_exposure	Texas	80	7/1/20	
+focus	division_exposure	Louisiana	80	7/1/20	
+focus	division_exposure	Tennessee	80	7/1/20	
+focus	division_exposure	Georgia	80	7/1/20	
+focus	division_exposure	Florida	80	7/1/20	
+focus	division_exposure	North Carolina	80	7/1/20	
+focus	division_exposure	Maryland	80	7/1/20	
+focus	division_exposure	Minnesota	80	7/1/20	
+focus	division_exposure	Wisconsin	80	7/1/20	
+focus	division_exposure	Iowa	80	7/1/20	
+focus	division_exposure	Illinois	80	7/1/20	
+focus	division_exposure	Missouri	80	7/1/20	
+focus	division_exposure	Indiana	80	7/1/20	
+focus	division_exposure	Michigan	80	7/1/20	
+focus	division_exposure	Ohio	80	7/1/20	
+focus	division_exposure	Massachusetts	80	7/1/20	
+focus	division_exposure	Pennsylvania	80	7/1/20	
+focus	division_exposure	New Jersey	80	7/1/20	
+context	region_exposure	Europe	80	7/1/20	
+context	region_exposure	Asia	80	7/1/20	
+context	country_exposure	USA	80	7/1/20	
+ignore	country_exposure	Canada			
+ignore	country_exposure	India			
+ignore	country_exposure	South Africa			
+ignore	country_exposure	Bangladesh			
+ignore	country_exposure	Saudi Arabia			
+ignore	country_exposure	Australia			

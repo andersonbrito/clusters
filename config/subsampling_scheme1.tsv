@@ -1,0 +1,32 @@
+purpose	level	name	size	start	end
+focus	division_exposure	California	20		6/30/20
+focus	division_exposure	Nevada	20		6/30/20
+focus	division_exposure	Arizona	20		6/30/20
+focus	division_exposure	Colorado	20		6/30/20
+focus	division_exposure	Texas	20		6/30/20
+focus	division_exposure	Louisiana	20		6/30/20
+focus	division_exposure	Tennessee	20		6/30/20
+focus	division_exposure	Georgia	20		6/30/20
+focus	division_exposure	Florida	20		6/30/20
+focus	division_exposure	North Carolina	20		6/30/20
+focus	division_exposure	Maryland	20		6/30/20
+focus	division_exposure	Minnesota	20		6/30/20
+focus	division_exposure	Wisconsin	20		6/30/20
+focus	division_exposure	Iowa	20		6/30/20
+focus	division_exposure	Illinois	20		6/30/20
+focus	division_exposure	Missouri	20		6/30/20
+focus	division_exposure	Indiana	20		6/30/20
+focus	division_exposure	Michigan	20		6/30/20
+focus	division_exposure	Ohio	20		6/30/20
+focus	division_exposure	Massachusetts	20		6/30/20
+focus	division_exposure	Pennsylvania	20		6/30/20
+focus	division_exposure	New Jersey	20		6/30/20
+context	region_exposure	Europe	20		6/30/20
+context	region_exposure	Asia	20		6/30/20
+context	country_exposure	USA	20		6/30/20
+ignore	country_exposure	Canada			
+ignore	country_exposure	India			
+ignore	country_exposure	South Africa			
+ignore	country_exposure	Bangladesh			
+ignore	country_exposure	Saudi Arabia			
+ignore	country_exposure	Australia			

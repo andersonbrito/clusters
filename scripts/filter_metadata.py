@@ -152,7 +152,7 @@ if __name__ == '__main__':
                         code = 'XX'  # change this line to match the acronym of the most likely state of origin if the 'State' field is unknown
                     else:
                         code = row['state']
-                    strain = row['sample'] + '/' + id # new strain name
+                    strain = code + '/' + row['sample'] + '/' + id # new strain name
 
                     if strain not in found:
                         gisaid_epi_isl = ''
