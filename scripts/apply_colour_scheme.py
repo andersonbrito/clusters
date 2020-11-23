@@ -432,7 +432,7 @@ if __name__ == '__main__':
 
 
     # special colouring
-    categories = {'International': '#BFBFBF', 'USA': '#609f80', 'Community':'#1d3026'}
+    categories = {'International': '#BFBFBF', 'USA': '#A6A6A6', 'Community':'#1d3026'}
     results['category'] = {}
     usregion_hues = {
         'USA-Northeast': 220, # blues
