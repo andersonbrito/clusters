@@ -162,16 +162,15 @@ rule colours:
 ### STARTING NEXTSTRAIN PIPELINE
 
 
-input_fasta = rules.filter_metadata.output.sequences,
-input_metadata = rules.geoscheme.output.final_metadata,
+input_fasta = "data/sequences.fasta",
+input_metadata = "data/metadata.tsv",
 reference = files.reference,
 clades = files.clades,
-lat_longs = rules.coordinates.output.latlongs,
-colors = rules.colours.output.colours,
+lat_longs = "config/latlongs.tsv",
+colors = "config/colors.tsv",
 dropped_strains = files.dropped_strains,
 auspice_config = "config/auspice_config.json",
 weights = "config/weights.tsv"
-
 
 ### Excluding sequences included in dropped_strains
 rule filter:
@@ -241,7 +240,7 @@ rule mask:
 	params:
 		mask_from_beginning = 55,
 		mask_from_end = 100,
-		mask_sites = "150, 153, 635, 1707, 1895, 2091, 2094, 2198, 2604, 3145, 3564, 3639, 3778, 4050, 5011, 5257, 5736, 5743, 5744, 6167, 6255, 6869, 8022, 8026, 8790, 8827, 8828, 9039, 10129, 10239, 11074, 11083, 11535, 13402, 13408, 13476, 13571, 14277, 15435, 15922, 16290, 16887, 19298, 19299, 19484, 19548, 20056, 20123, 20465, 21550, 21551, 21575, 22335, 22516, 22521, 22661, 22802, 24389, 24390, 24622, 24933, 25202, 25381, 26549, 27760, 27761, 27784, 28253, 28985, 29037, 29039, 29425, 29553, 29827, 29830"
+		mask_sites = "150 153 635 1707 1895 2091 2094 2198 2604 3145 3564 3639 3778 4050 5011 5257 5736 5743 5744 6167 6255 6869 8022 8026 8790 8827 8828 9039 10129 10239 11074 11083 11535 13402 13408 13476 13571 14277 15435 15922 16290 16887 19298 19299 19484 19548 20056 20123 20465 21550 21551 21575 22335 22516 22521 22661 22802 24389 24390 24622 24933 25202 25381 26549 27760 27761 27784 28253 28985 29037 29039 29425 29553 29827 29830"
 	shell:
 		"""
 		python3 scripts/mask-alignment.py \
