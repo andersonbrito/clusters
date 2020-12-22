@@ -75,7 +75,7 @@ if __name__ == '__main__':
     lColumns = dfN.columns.values  # list of column in the original metadata file
 
     # Lab genomes metadata
-    dfL = pd.read_excel(metadata2, index_col=None, header=0, sheet_name='Genomes',
+    dfL = pd.read_excel(metadata2, index_col=None, header=0, sheet_name=0,
                         # 'sheet_name' must be changed to match the Excel sheet name
                         converters={'sample': str, 'collection-date': str, 'category': str, 'batch': str})  # this need to be tailored to your lab's naming system
     dfL.fillna('', inplace=True)
