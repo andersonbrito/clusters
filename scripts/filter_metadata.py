@@ -62,7 +62,7 @@ if __name__ == '__main__':
     # nextstrain metadata
     dfN = pd.read_csv(metadata1, encoding='utf-8', sep='\t', dtype='str')
     try:
-        dfN = dfN[['strain', 'gisaid_epi_isl', 'genbank_accession', 'date', 'country', 'division', 'location',
+        dfN = dfN[['strain', 'pangolin_lineage', 'gisaid_epi_isl', 'genbank_accession', 'date', 'country', 'division', 'location',
                       'region_exposure', 'country_exposure', 'division_exposure', 'originating_lab', 'submitting_lab']]
         dfN.insert(4, 'iso', '')
     except:
@@ -81,7 +81,6 @@ if __name__ == '__main__':
     dfL.fillna('', inplace=True)
     dfL.set_index('id', inplace=True)
 
-    dHeaders = {}
     notFound = []
     lstNewMetadata = []
     found = []
@@ -121,8 +120,6 @@ if __name__ == '__main__':
             iso = get_iso(country_exposure)
             row.iso.values[0] = iso  # needed for exporting a renaming file
             date = row.date.values[0]
-            header = '|'.join([strain, iso, division.replace(' ', '-'), date])
-            dHeaders[strain] = header
 
             lValues = row.values[0]
             for field, value in zip(fields.keys(), lValues):
@@ -156,6 +153,7 @@ if __name__ == '__main__':
 
                     if strain not in found:
                         gisaid_epi_isl = ''
+                        pangolin_lineage = ''
                         genbank_accession = ''
                         if len(str(row['collection-date'])) > 1:
                             date = row['collection-date'].split(' ')[0].replace('.', '-').replace('/', '-')
@@ -179,12 +177,9 @@ if __name__ == '__main__':
                         batch = 'Batch' + str('0' * (3 - len(row['batch']))) + row['batch']
                         sequencing_date = row['sequencing-collection-date'].strftime('%Y-%m-%d')
 
-                        lValues = [strain, gisaid_epi_isl, genbank_accession, date, iso, country, division, location,
+                        lValues = [strain, pangolin_lineage, gisaid_epi_isl, genbank_accession, date, iso, country, division, location,
                                    region_exposure, country_exposure, division_exposure, originating_lab, submitting_lab,
                                    category, batch, sequencing_date]
-
-                        header = '|'.join([strain, country, division.replace(' ', '-'), date])
-                        dHeaders[strain] = header
 
                         for field, value in zip(fields.keys(), lValues):
                             fields[field] = value
@@ -197,8 +192,6 @@ if __name__ == '__main__':
                         continue
 
             else:  # Assign 'NA' if no metadata is available
-                header = '|'.join([id, 'NA', 'NA', 'NA', 'NA'])
-                dHeaders[id] = header
                 notFound.append(id)
         lstNewMetadata = lstNewMetadata + list(dRow.values())
 
