@@ -97,9 +97,6 @@ if __name__ == '__main__':
             level = exposure_column.split('_')[0]
             if dfN.loc[idx, exposure_column].lower() in ['', 'unknown', 'na']:
                 dfN.loc[idx, exposure_column] = dfN.loc[idx, level]
-                if dfN.loc[idx, level] == 'Massachussets':
-                    print(dfN.loc[idx, level], dfN.loc[idx, exposure_column])
-    # print(dfN[['strain', 'date']].iloc[[0, -1]])
 
     print('\n* Assigning epiweek column...')
     # get epiweek end date, create column
