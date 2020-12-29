@@ -307,7 +307,7 @@ rule refine:
 			--timetree \
 			--coalescent {params.coalescent} \
 			--date-confidence \
-            --clock-filter-iqd 3 \
+			--clock-filter-iqd 3 \
 			--clock-rate {params.clock_rate} \
 			--clock-std-dev {params.clock_std_dev} \
 			--divergence-units {params.unit} \
