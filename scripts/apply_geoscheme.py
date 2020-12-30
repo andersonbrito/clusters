@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
 
     focus = ['USA']
-    not_focus = ['India', 'South Africa']
+    not_focus = ['India']
 
 
     # get ISO alpha3 country codes
