@@ -64,7 +64,7 @@ if __name__ == '__main__':
     try:
         dfN = dfN[['strain', 'pangolin_lineage', 'gisaid_epi_isl', 'genbank_accession', 'date', 'country', 'division', 'location',
                       'region_exposure', 'country_exposure', 'division_exposure', 'originating_lab', 'submitting_lab']]
-        dfN.insert(4, 'iso', '')
+        dfN.insert(5, 'iso', '')
     except:
         pass
     dfN['category'] = ''
@@ -177,10 +177,9 @@ if __name__ == '__main__':
                         batch = 'Batch' + str('0' * (3 - len(row['batch']))) + row['batch']
                         sequencing_date = row['sequencing-collection-date'].strftime('%Y-%m-%d')
 
-                        lValues = [strain, pangolin_lineage, gisaid_epi_isl, genbank_accession, date, iso, country, division, location,
-                                   region_exposure, country_exposure, division_exposure, originating_lab, submitting_lab,
+                        lValues = [strain, pangolin_lineage, gisaid_epi_isl, genbank_accession, date, iso, country, division,
+                                   location, region_exposure, country_exposure, division_exposure, originating_lab, submitting_lab,
                                    category, batch, sequencing_date]
-
                         for field, value in zip(fields.keys(), lValues):
                             fields[field] = value
                         dRow[id] = fields
