@@ -50,7 +50,7 @@
     "distance_measure": "div",
     "geo_resolution": "division_exposure",
     "map_triplicate": true,
-    "branch_label": "none"
+    "branch_label": "clade"
   },
   "filters": [
     "category",
