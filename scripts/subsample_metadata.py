@@ -90,13 +90,13 @@ if __name__ == '__main__':
     dfN = dfN.sort_values(by='date')  # sorting lines by date
     start, end = dfN['date'].min(), today
 
-    print('\n* Fixing information about place of exposure...')
-    # fix exposure
-    for exposure_column in ['region_exposure', 'country_exposure', 'division_exposure']:
-        for idx, row in dfN.iterrows():
-            level = exposure_column.split('_')[0]
-            if dfN.loc[idx, exposure_column].lower() in ['', 'unknown', 'na']:
-                dfN.loc[idx, exposure_column] = dfN.loc[idx, level]
+#     print('\n* Fixing information about place of exposure...')
+#     # fix exposure
+#     for exposure_column in ['region_exposure', 'country_exposure', 'division_exposure']:
+#         for idx, row in dfN.iterrows():
+#             level = exposure_column.split('_')[0]
+#             if dfN.loc[idx, exposure_column].lower() in ['', 'unknown', 'na']:
+#                 dfN.loc[idx, exposure_column] = dfN.loc[idx, level]
 
     print('\n* Assigning epiweek column...')
     # get epiweek end date, create column
