@@ -62,8 +62,6 @@ if __name__ == '__main__':
     # nextstrain metadata
     dfN = pd.read_csv(metadata1, encoding='utf-8', sep='\t', dtype='str')
     try:
-        dfN = dfN[['strain', 'pangolin_lineage', 'gisaid_epi_isl', 'genbank_accession', 'date', 'country', 'division', 'location',
-                      'region_exposure', 'country_exposure', 'division_exposure', 'originating_lab', 'submitting_lab']]
         dfN.insert(5, 'iso', '')
     except:
         pass
