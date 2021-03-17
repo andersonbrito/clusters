@@ -20,42 +20,33 @@ if __name__ == '__main__':
     remove = args.remove
     outfile = args.output
 
-
-    # genomes = path + "gisaid_hcov-19.fasta"
-    # new_genomes = path + "new_genomes.fasta"
-    # keep = path + 'keep.txt'
-    # remove = path + "remove.txt"
-    # outfile = path + "sequences_temp.fasta"
+    # path = '/Users/anderson/GLab Dropbox/Anderson Brito/projects/ncov/ncov_variants/nextstrain/ncov_20210219_testipipeline/'
+    # genomes = path + "pre-analyses/gisaid_hcov-19_short.fasta"
+    # new_genomes = path + "pre-analyses/new_genomes.fasta"
+    # keep = path + 'config/keep.txt'
+    # remove = path + "config/remove.txt"
+    # outfile = path + "pre-analyses/temp_sequences.fasta"
 
 
     # store only new sequences in a dictionary, ignoring existing ones
+    print('\n### Loading new sequences\n')
     newly_sequenced = {}
     for fasta in SeqIO.parse(open(new_genomes),'fasta'):
         id, seq = fasta.description, fasta.seq
-        if '/' in id:
-        	id = id.split('/')[0]
         if id not in newly_sequenced.keys(): # avoid potential duplicates
             newly_sequenced[id] = str(seq)
+    print('\t- Done!\n')
 
-    # create a list of the existing sequences
-    all_sequences = {}
-    for fasta in SeqIO.parse(open(genomes),'fasta'):
-        id, seq = fasta.description, fasta.seq
-        # print(id)
-        id = id.replace('hCoV-19/', '').split('|')[0].replace(' ', '')
-        all_sequences[id] = str(seq)
 
     # create a list of sequences to be added in all instances
-    keep_sequences = {}
-    mismatch = []
-    for id in sorted(open(keep, "r").readlines()):
+    keep_sequences = []
+    for id in open(keep, "r").readlines():
         if id[0] not in ["#", "\n"]:
             id = id.strip()
-            if id not in keep_sequences.keys():
-                try:
-                    keep_sequences[id] = all_sequences[id]
-                except:
-                    mismatch.append(id)
+            if id not in newly_sequenced:
+                if id not in keep_sequences:
+                    keep_sequences.append(id)
+
 
     # create a list of sequences to be ignored in all instances
     remove_sequences = []
@@ -67,42 +58,44 @@ if __name__ == '__main__':
 
     # export only sequences to be used in the nextstrain build
     c = 1
-    sequences = {**keep_sequences, **newly_sequenced}
     print('\n### Exporting sequences\n')
     exported = []
+    all_sequences = []
     with open(outfile, 'w') as output:
-        for id in sequences.keys():
-            if id not in remove_sequences: # filter out unwanted sequences
-                entry = ">" + id + "\n" + sequences[id].upper() + "\n"
+        for fasta in SeqIO.parse(open(genomes), 'fasta'):
+            id, seq = fasta.description, fasta.seq
+            all_sequences.append(id)
+
+            if id not in remove_sequences:
+                if id in keep_sequences: # filter out unwanted sequences
+                    entry = ">" + id + "\n" + str(seq).upper() + "\n"
+                    exported.append(id)
+                    output.write(entry)
+                    print(str(c) + '. ' + id)
+                    c += 1
+
+        for id, seq in newly_sequenced.items():
+                print('* ' + str(c) + '. ' + id)
+                entry = ">" + id + "\n" + seq.upper() + "\n"
                 exported.append(id)
                 output.write(entry)
-                if len(id) < 5: # search for newly sequenced genomes, named "F999"
-                    print('* ' + str(c) + '. ' + id)
-                elif len(id) > 4:
-                    print(str(c) + '. ' + id)
-            else:
-                c -= 1
-            c += 1
+                c += 1
+    print('\n- Done!\n')
 
-    # report sequences that were not found
-    m = 1
+
+    # mismatched sequence headers
+    mismatch = [genome for genome in keep_sequences if genome not in all_sequences]
     if len(mismatch) > 0:
-        print('\n### List of genomes not found in input sequence file\n')
+        print('\n### Possible sequence header mismatches\n')
+        m = 1
         for id in mismatch:
             print(str(m) + '. ' + id)
             m += 1
     else:
-        print('\tAll requested genomes were successfully incorporated in the analysis...')
+        print('\nNo sequence name mismatches found...')
 
 
-    # excluding sequences
-    print('\n### Excluding sequences ###\n')
-    e = 1
-    for id in remove_sequences:
-        print(str(e) + '. ' + id)
-        e += 1
-
-    print('\n### Final result\n')
+    print('\n\n### Final result\n')
 
     print('Lab file contains ' + str(len(newly_sequenced)) + ' sequences')
     print('GISAID file contains ' + str(len(all_sequences)) + ' sequences\n')
