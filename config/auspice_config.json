@@ -17,7 +17,7 @@
       "type": "categorical"
     },
     {
-      "key": "pangolin_lineage",
+      "key": "pango_lineage",
       "title": "Lineage",
       "type": "categorical"
     },
@@ -36,7 +36,7 @@
       "title": "Division",
       "type": "categorical"
     },
-    {"key":"sequencing_collection_date",
+    {"key":"sequencing_date",
     "title":"Collected for sequencing",
     "type":"categorical"
     }
@@ -56,7 +56,7 @@
     "category",
     "batch",
     "sequencing_date",
-    "pangolin_lineage",
+    "pango_lineage",
     "division_exposure",
     "country_exposure"
   ],
