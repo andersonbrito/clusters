@@ -60,21 +60,22 @@ if __name__ == '__main__':
 
     # nextstrain metadata
     dfN = pd.read_csv(metadata1, encoding='utf-8', sep='\t', dtype='str')
+
     dfN.insert(5, 'iso', '')
     dfN['category'] = ''
     dfN['batch'] = ''
     dfN['sequencing_date'] = ''
 
     dfN.fillna('', inplace=True)
-    # lColumns = dfN.columns.values  # list of column in the original metadata file
     list_columns = dfN.columns.values  # list of column in the original metadata file
 
     # Lab genomes metadata
     dfL = pd.read_excel(metadata2, index_col=None, header=0, sheet_name=0,
                         # 'sheet_name' must be changed to match the Excel sheet name
                         converters={'sample': str, 'collection-date': str, 'category': str, 'batch': str})  # this need to be tailored to your lab's naming system
-    dfL.fillna('', inplace=True)
+    dfL = dfL.rename(columns={'collection-date': 'date', 'lab': 'originating_lab'})
 
+    dfL.fillna('', inplace=True)
 
     # output dataframe
     outputDF = pd.DataFrame(columns=list_columns)
@@ -125,6 +126,8 @@ if __name__ == '__main__':
             strain = code + '/' + row['sample'] + '/' + id # new strain name
 
             dict_row['strain'] = strain
+            dict_row['iso'] = get_iso(dict_row['country'])
+            dict_row['originating_lab'] = dfL.loc[idx, 'originating_lab']
             dict_row['submitting_lab'] = 'Grubaugh Lab - Yale School of Public Health'
             dict_row['authors'] = 'Fauver et al'
             dict_row['category'] = row['category']
